@@ -1,0 +1,62 @@
+
+:root {
+  --fond: #f6f5f1; --carte: #ffffff; --texte: #1f2328; --doux: #5f6670;
+  --accent: #1d5fa8; --accent-clair: #e6eef8; --bord: #e2e0da;
+  --vert: #23753a; --vert-clair: #eaf5ec;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+       background: var(--fond); color: var(--texte); line-height: 1.5; }
+header { background: var(--accent); color: white; padding: 1.1rem 1.5rem; }
+header a { color: white; text-decoration: none; font-weight: 700; font-size: 1.25rem; }
+main { max-width: 860px; margin: 0 auto; padding: 1.5rem; }
+nav.fil { font-size: .9rem; color: var(--doux); margin-bottom: 1rem; }
+nav.fil a { color: var(--accent); text-decoration: none; }
+h1 { margin: .2rem 0 1.2rem; font-size: 1.7rem; }
+h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: .05em;
+     color: var(--doux); margin: 1.8rem 0 .6rem; }
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .8rem; }
+a.carte { display: block; background: var(--carte); border: 1px solid var(--bord); border-radius: 10px;
+          padding: 1rem 1.1rem; text-decoration: none; color: var(--texte); font-weight: 600;
+          transition: border-color .15s, transform .15s; }
+a.carte:hover { border-color: var(--accent); transform: translateY(-2px); }
+a.carte small { display: block; font-weight: 400; color: var(--doux); margin-top: .2rem; }
+ul.docs { list-style: none; padding: 0; margin: 0; }
+ul.docs li { display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+             background: var(--carte); border: 1px solid var(--bord); border-radius: 8px;
+             padding: .7rem 1rem; margin-bottom: .5rem; }
+.boutons { display: flex; gap: .5rem; flex-shrink: 0; }
+.boutons a { font-size: .9rem; padding: .3rem .8rem; border-radius: 6px; text-decoration: none;
+             background: var(--accent-clair); color: var(--accent); font-weight: 600; cursor: pointer; }
+.boutons a:hover { background: var(--accent); color: white; }
+.boutons a.corr { background: var(--vert-clair); color: var(--vert); }
+.boutons a.corr:hover { background: var(--vert); color: white; }
+footer { text-align: center; color: var(--doux); font-size: .8rem; padding: 2rem 1rem; }
+
+/* Fenêtre de mot de passe */
+#fenetre { position: fixed; inset: 0; background: rgba(20, 25, 35, .45); display: none;
+           align-items: center; justify-content: center; padding: 1rem; z-index: 10; }
+#fenetre.ouverte { display: flex; }
+#fenetre .boite { background: white; border-radius: 12px; padding: 1.4rem 1.5rem; width: 100%;
+                  max-width: 380px; box-shadow: 0 10px 40px rgba(0,0,0,.2); }
+#fenetre h3 { margin: 0 0 .3rem; font-size: 1.1rem; }
+#fenetre p { margin: 0 0 .9rem; color: var(--doux); font-size: .92rem; }
+#fenetre input { width: 100%; font-size: 1rem; padding: .55rem .7rem; border: 1px solid var(--bord);
+                 border-radius: 7px; margin-bottom: .8rem; }
+#fenetre .actions { display: flex; gap: .5rem; justify-content: flex-end; flex-wrap: wrap; }
+#fenetre button, #fenetre .actions a { font-size: .95rem; padding: .45rem .9rem; border-radius: 7px;
+                 border: none; cursor: pointer; font-weight: 600; text-decoration: none; }
+#fenetre .principal { background: var(--accent); color: white; }
+#fenetre .secondaire { background: #eef0f2; color: var(--texte); }
+#fenetre .erreur { color: #b42318; font-weight: 600; }
+
+body {
+  background-color: #fbfbf8;
+  background-image:
+    linear-gradient(rgba(29, 95, 168, .10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 95, 168, .10) 1px, transparent 1px),
+    linear-gradient(rgba(29, 95, 168, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(29, 95, 168, .05) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-attachment: fixed;
+}
