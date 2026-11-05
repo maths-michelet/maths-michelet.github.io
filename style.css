@@ -50,6 +50,17 @@ footer { text-align: center; color: var(--doux); font-size: .8rem; padding: 2rem
 #fenetre .secondaire { background: #eef0f2; color: var(--texte); }
 #fenetre .erreur { color: #b42318; font-weight: 600; }
 
+/* Classe entièrement protégée : écran de mot de passe à la place du contenu */
+.verrou { background: var(--carte); border: 1px solid var(--bord); border-radius: 12px;
+          padding: 1.4rem 1.5rem; max-width: 420px; }
+.verrou p { margin: 0 0 .9rem; color: var(--doux); }
+.verrou .ligne { display: flex; gap: .5rem; }
+.verrou input { flex: 1; min-width: 0; font-size: 1rem; padding: .55rem .7rem;
+                border: 1px solid var(--bord); border-radius: 7px; }
+.verrou button { font-size: .95rem; padding: .45rem 1rem; border-radius: 7px; border: none;
+                 cursor: pointer; font-weight: 600; background: var(--accent); color: white; }
+.verrou .erreur { color: #b42318; font-weight: 600; margin: .8rem 0 0; }
+
 body {
   background-color: #fbfbf8;
   background-image:

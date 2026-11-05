@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privé — Mathématiques au lycée Jules Michelet</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><a href="../index.html">Mathématiques au lycée Jules Michelet</a></header>
+<main>
+<nav class="fil"><a href="../index.html">Accueil</a> › Privé</nav>
+<h1>Privé</h1>
+<div id="verrou">
+<p id="attente-verrou">Ouverture en cours…</p>
+<form class="verrou" id="form-verrou" style="display:none">
+  <p>🔒 Les documents de cette classe sont protégés. Entre le mot de passe donné en classe.</p>
+  <div class="ligne">
+    <input type="password" id="mdp-verrou" autocomplete="current-password" placeholder="Mot de passe">
+    <button type="submit">Valider</button>
+  </div>
+  <p class="erreur" id="msg-verrou"></p>
+</form>
+<noscript><p>Cette page a besoin de JavaScript pour s'afficher.</p></noscript>
+</div>
+<div id="contenu"></div>
+<script type="application/octet-stream" id="contenu-chiffre" data-classe="prive">
+VCTcXuo9Ck9a5/U1pFvOKwgvyLYoiFxUbZXF/ahxZ+wOJm2VYcenFXstPzCDid37VKHw0bfhCV9scAxJihwBeMK4qIqMHp14nLHkFoNXZaWu
+</script>
+</main>
+<footer>Mis à jour le 05/11/2026</footer>
+
+<div id="fenetre"><form class="boite" id="form-mdp">
+  <h3 id="titre-fenetre"></h3>
+  <p id="msg"></p>
+  <input type="password" id="mdp" autocomplete="current-password" placeholder="Mot de passe">
+  <div class="actions" id="actions"></div>
+</form></div>
+<script src="../protege.js"></script>
+</body>
+</html>
